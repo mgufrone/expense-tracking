@@ -93,7 +93,7 @@ class ExpensePage extends StatelessWidget {
               final item = snapshot.data[index - 1];
               return ExpenseItemWidget(
                 expense: item,
-                onPressed: () => this.editExpense(context, index, item),
+                onPressed: () => this.editExpense(context, index - 1, item),
               );
             },
             itemCount: snapshot.data.length + 1,
